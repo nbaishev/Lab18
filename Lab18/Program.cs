@@ -11,13 +11,13 @@ namespace Lab18
         static void Main(string[] args)
         {
             Console.WriteLine("Введите строку");
-            string s = Console.ReadLine();
+            string str = Console.ReadLine();
             bool fl = true;
             Stack<char> brackets = new Stack<char>();
 
-            for (int i = 0; i < s.Length; i++)
+            for (int i = 0; i < str.Length; i++)
             {
-                switch (s[i])
+                switch (str[i])
                 {
                     case '(':
                         brackets.Push(')');
@@ -29,9 +29,9 @@ namespace Lab18
                         brackets.Push('}');
                         break;
                 }
-                if ((s[i] == ')') || (s[i] == ']') || (s[i] == '}'))
+                if ((str[i] == ')') || (str[i] == ']') || (str[i] == '}'))
                 {
-                    if ((brackets.Count == 0) || (s[i] != brackets.Pop()))
+                    if ((brackets.Count == 0) || (str[i] != brackets.Pop()))
                     {
                         fl = false;
                     }
